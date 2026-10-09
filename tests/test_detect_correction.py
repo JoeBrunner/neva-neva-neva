@@ -71,6 +71,12 @@ class DetectTest(unittest.TestCase):
         out = self.run_hook("not json")
         self.assertEqual((out.returncode, out.stdout), (0, ""))
 
+    def test_hook_survives_odd_shapes(self):
+        for payload in ("[]", "null", '{"prompt": 42}', '{"prompt": null}'):
+            with self.subTest(payload=payload):
+                out = self.run_hook(payload)
+                self.assertEqual((out.returncode, out.stdout), (0, ""))
+
     def test_quiet_switch(self):
         out = self.run_hook(json.dumps({"prompt": "I told you"}), env={"NEVA_QUIET": "1"})
         self.assertEqual(out.stdout, "")

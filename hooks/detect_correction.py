@@ -50,7 +50,8 @@ def main() -> int:
         event = json.load(sys.stdin)
     except (json.JSONDecodeError, ValueError):
         return 0
-    if is_correction(event.get("prompt") or ""):
+    prompt = event.get("prompt") if isinstance(event, dict) else None
+    if isinstance(prompt, str) and is_correction(prompt):
         json.dump(
             {"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": REMINDER}},
             sys.stdout,
