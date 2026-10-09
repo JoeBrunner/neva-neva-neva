@@ -1,0 +1,12 @@
+{
+  "name": "neva-neva-neva",
+  "description": "Correct Claude once. Neva again. When you correct Claude, it writes the fix somewhere it can't skip, and the more you repeat yourself, the harder it locks. Free Claude Code skill.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joe Brunner"
+  },
+  "homepage": "https://github.com/JoeBrunner/neva-neva-neva",
+  "repository": "https://github.com/JoeBrunner/neva-neva-neva",
+  "license": "MIT",
+  "keywords": ["claude-code", "skill", "memory", "corrections", "hooks", "rules"]
+}

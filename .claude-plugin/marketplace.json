@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "neva-neva-neva",
+  "description": "The Neva Neva Neva skill for Claude Code",
+  "owner": {
+    "name": "Joe Brunner"
+  },
+  "plugins": [
+    {
+      "name": "neva-neva-neva",
+      "description": "Turns every correction you give Claude into a check, a skill step or a rule file it can't skip, and escalates the ones you have to repeat.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/JoeBrunner/neva-neva-neva"
+    }
+  ]
+}

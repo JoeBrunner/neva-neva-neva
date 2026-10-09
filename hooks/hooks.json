@@ -1,0 +1,16 @@
+{
+  "description": "Reminds Claude to use the neva-neva-neva skill when a message reads like a correction.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/detect_correction.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
